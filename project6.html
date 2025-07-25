@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RIT University</title>
+  <link rel="icon" href="logo.jpg" />
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('rit.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      line-height: 1.6;
+    }
+    /* Overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.65);
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.8);
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header img {
+      width: 70px;
+      height: 70px;
+      vertical-align: middle;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #fd7e14;
+    }
+    header h1 {
+      display: inline-block;
+      margin-left: 15px;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: #fd7e14;
+      vertical-align: middle;
+    }
+    hr.divider {
+      border: 1px solid #fd7e14;
+      margin: 15px auto 30px;
+      width: 150px;
+      border-radius: 10px;
+    }
+
+    /* Paragraph content */
+    .intro {
+      font-size: 1.1rem;
+      text-align: justify;
+      margin-bottom: 40px;
+      color: #eee;
+    }
+
+    /* Button grid */
+    .btn-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      margin-bottom: 50px;
+    }
+    .btn-grid a {
+      text-decoration: none;
+    }
+    .btn {
+      display: block;
+      background-color: #fd7e14;
+      color: white;
+      padding: 12px 20px;
+      text-align: center;
+      font-weight: 600;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(253, 126, 20, 0.4);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+      cursor: pointer;
+    }
+    .btn:hover,
+    .btn:focus {
+      background-color: #e06b00;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(224, 107, 0, 0.6);
+      outline: none;
+    }
+
+    /* Achievements section */
+    section.achievements {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px 25px;
+      border-radius: 12px;
+      color: #f0f0f0;
+    }
+    section.achievements h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #fd7e14;
+      text-decoration: underline;
+    }
+    section.achievements article {
+      margin-bottom: 30px;
+    }
+    section.achievements article h3 {
+      background-color: #fd7e14;
+      color: #222;
+      padding: 10px 15px;
+      border-radius: 25px;
+      width: fit-content;
+      margin-bottom: 15px;
+      font-weight: 700;
+      box-shadow: 0 3px 6px rgba(253, 126, 20, 0.5);
+    }
+    section.achievements article p {
+      font-size: 1rem;
+      color: #eee;
+      text-align: justify;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.75);
+      color: #ddd;
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+    footer p {
+      margin: 6px 0;
+    }
+    footer a {
+      color: #fd7e14;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: 600;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact section */
+    .contact-info {
+      max-width: 450px;
+      margin: 40px auto;
+      background-color: rgba(255,255,255,0.15);
+      padding: 20px;
+      border-radius: 10px;
+      color: #ddd;
+      text-align: center;
+      box-shadow: 0 0 12px rgba(253,126,20,0.5);
+    }
+    .contact-info a {
+      color: #fd7e14;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Scroll to top button */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #fd7e14;
+      border: none;
+      padding: 15px 18px;
+      border-radius: 50%;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(253,126,20,0.6);
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+    #scrollTopBtn:hover {
+      background-color: #e06b00;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .btn-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <img src="logo.jpg" alt="University Logo" />
+      <h1>RIT University</h1>
+      <hr class="divider" />
+    </header>
+
+    <p class="intro">
+      Welcome to my college. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio repudiandae consequuntur impedit tempore nemo odio maxime recusandae officia tenetur possimus ducimus odit incidunt eum optio quam laborum voluptates atque doloremque nihil a molestias accusamus, numquam mollitia cum. Distinctio dicta minus expedita quos repudiandae. Consectetur mollitia eligendi obcaecati! Ullam, fugiat unde? Lorem ipsum dolor sit amet consectetur adipisicing elit...
+    </p>
+
+    <div class="btn-grid" role="navigation" aria-label="Main Navigation Buttons">
+      <a href="project5.html"><button class="btn" aria-label="Login to the University Portal">Login</button></a>
+      <a href="fees.html"><button class="btn">Fees Structure</button></a>
+      <a href="hostel.html"><button class="btn">Hostel Rooms</button></a>
+      <a href="events.html"><button class="btn">Upcoming Events</button></a>
+      <a href="course.html"><button class="btn">Courses Offered</button></a>
+      <a href="alumini.html"><button class="btn">Alumni Network</button></a>
+      <a href="campus.html"><button class="btn">Campus Life</button></a>
+      <a href="contact.html"><button class="btn">Contact Admissions</button></a>
+      <a href="ai.html"><button class="btn">AI Programs</button></a>
+      <a href="cybersecurity.html"><button class="btn">Cybersecurity</button></a>
+      <a href="space.html"><button class="btn">Space Tech</button></a>
+      <a href="green.html"><button class="btn">Green Energy</button></a>
+    </div>
+
+    <section class="achievements" aria-label="University Achievements">
+      <h2>Achievements</h2>
+
+      <article>
+        <h3>Academic Excellence</h3>
+        <p>
+          Achieving strong academic performance is a cornerstone of success during college. This can be reflected in your GPA, receiving academic honors like the Dean's List, President's List, or Latin honors like magna cum laude. You may also highlight awards for outstanding performance in specific subjects or departments, demonstrating mastery in your chosen field...
+        </p>
+      </article>
+
+      <article>
+        <h3>Research and Innovation</h3>
+        <p>
+          Beyond coursework, actively engaging in research projects or independent studies signifies a deeper level of academic involvement and intellectual curiosity. You can highlight specific research findings, presenting discoveries at conferences, or even publishing your work in academic journals...
+        </p>
+      </article>
+
+      <article>
+        <h3>Leadership and Extracurricular Involvement</h3>
+        <p>
+          Taking on leadership roles within student organizations, clubs, or academic committees showcases your ability to motivate peers, manage projects,

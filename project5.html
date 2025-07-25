@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Example</title>
+    <style>
+        body {
+            margin: 0; 
+            padding: 0; 
+            background-image: url('collegeimg.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            font-family: Arial, sans-serif; 
+            color: white;
+            position: relative;
+            min-height: 100vh;
+        }
+        /* Transparent overlay */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            position: fixed; 
+            top: 0; left: 0; 
+            width: 100%; height: 100%;
+            z-index: -1;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            width: 60%;
+            color: white;
+            margin-top: 40px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 6px;
+            margin-top: 15px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input::placeholder,
+        textarea::placeholder {
+            color: #ddd;
+        }
+        textarea {
+            resize: vertical;
+        }
+        /* Gender radio buttons container */
+        .gender-group {
+            display: flex;
+            gap: 30px;
+            margin-top: 6px;
+        }
+        .gender-group label {
+            cursor: pointer;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        input[type="radio"] {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        /* Checkbox group */
+        .checkbox-group label {
+            cursor: pointer;
+            font-weight: normal;
+            display: block;
+            margin-top: 4px;
+        }
+        input[type="checkbox"] {
+            transform: scale(1.2);
+            cursor: pointer;
+            margin-right: 6px;
+        }
+        select {
+            color: black;
+        }
+        /* Buttons container */
+        .btn-group {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        button, .btn-link {
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+        button[type="submit"] {
+            background-color: #fd7e14; /* Orange */
+            color: white;
+            box-shadow: 0 4px 8px rgba(253, 126, 20, 0.5);
+        }
+        button[type="submit"]:hover {
+            background-color: #e06900;
+        }
+        button[type="reset"] {
+            background-color: #6c757d; /* Grey */
+            color: white;
+        }
+        button[type="reset"]:hover {
+            background-color: #5a6268;
+        }
+        .btn-link {
+            background-color: transparent;
+            color: #fd7e14;
+            text-decoration: underline;
+            border: none;
+            padding: 12px 0;
+            font-size: 16px;
+        }
+        .btn-link:hover {
+            color: #e06900;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <center>
+        <h1>ENTER DETAILS</h1>
+
+        <form action="/submit" method="POST" enctype="multipart/form-data">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+
+            <label for="regnum">Register Number:</label>
+            <input type="number" id="regnum" name="regnum" placeholder="12345678" required />
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1234567890" required />
+
+            <label>Gender:</label>
+            <div class="gender-group">
+                <label><input type="radio" name="gender" value="male" required /> Male</label>
+                <label><input type="radio" name="gender" value="female" /> Female</label>
+            </div>
+
+            <label>Interests:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="interests" value="sports" /> Sports</label>
+                <label><input type="checkbox" name="interests" value="music" /> Music</label>
+                <label><input type="checkbox" name="interests" value="movies" /> Movies</label>
+            </div>
+
+            <label for="languages">Languages Spoken:</label>
+            <select id="languages" name="languages" multiple size="4" required>
+                <option value="English">English</option>
+                <option value="Spanish">Spanish</option>
+                <option value="French">French</option>
+                <option value="Tamil">Tamil</option>
+            </select>
+
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself"></textarea>
+
+            <label for="profilePic">Upload Profile Picture:</label>
+            <input type="file" id="profilePic" name="profilePic" accept="image/*" />
+
+            <input type="hidden" name="userid" value="12345" />
+
+            <div class="btn-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <a href="project6.html" class="btn-link">Back to Home</a>
+            </div>
+
+        </form>
+    </center>
+
+</body>
+</html>

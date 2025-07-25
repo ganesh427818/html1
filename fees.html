@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fees Structure - RIT University</title>
+    <style>
+        /* Reset some default margins */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-image: url('rit.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            min-height: 100vh;
+        }
+        /* Overlay to darken background */
+        .overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        /* Container for content */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 30px 40px;
+            background-color: rgba(0, 0, 0, 0.65);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 5px;
+            font-size: 3em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #f8c146;
+            text-shadow: 2px 2px 6px #000;
+        }
+        h2 {
+            margin-bottom: 30px;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            color: #ddd;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+        th, td {
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+            font-size: 1.1em;
+        }
+        th {
+            background-color: rgba(248, 193, 70, 0.85);
+            color: #222;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        /* Last row border fix */
+        tr:last-child td {
+            border-bottom: none;
+        }
+        /* Button styles */
+        .raised-btn {
+            background-color: #2b14ff;  /* Blue */
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .raised-btn:hover {
+            box-shadow: 0 8px 14px rgba(0,0,0,0.5);
+            transform: translateY(-3px);
+        }
+        /* Link wrapper fix */
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay"></div>
+
+    <div class="container">
+        <h1>RIT University</h1>
+        <h2>Department-wise Fees Structure</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Department</th>
+                    <th>Tuition Fee (₹)</th>
+                    <th>Hostel Fee (₹)</th>
+                    <th>Total Fee (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Computer Science Engineering</td>
+                    <td>85,000</td>
+                    <td>40,000</td>
+                    <td>125,000</td>
+                </tr>
+                <tr>
+                    <td>Electronics & Communication</td>
+                    <td>80,000</td>
+                    <td>40,000</td>
+                    <td>120,000</td>
+                </tr>
+                <tr>
+                    <td>Electrical Engineering</td>
+                    <td>75,000</td>
+                    <td>40,000</td>
+                    <td>115,000</td>
+                </tr>
+                <tr>
+                    <td>Mechanical Engineering</td>
+                    <td>70,000</td>
+                    <td>40,000</td>
+                    <td>110,000</td>
+                </tr>
+                <tr>
+                    <td>Civil Engineering</td>
+                    <td>68,000</td>
+                    <td>40,000</td>
+                    <td>108,000</td>
+                </tr>
+                <tr>
+                    <td>Information Technology</td>
+                    <td>78,000</td>
+                    <td>40,000</td>
+                    <td>118,000</td>
+                </tr>
+                <tr>
+                    <td>AI & Data Science</td>
+                    <td>80,000</td>
+                    <td>40,000</td>
+                    <td>120,000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="project6.html"><button class="raised-btn" type="button">Back to Home</button></a>
+    </div>
+
+</body>
+</html>
